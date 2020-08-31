@@ -12,6 +12,7 @@ test -e "$REPOD/home_ecsos_monitoring.repo" || zypper addrepo "https://download.
 test -e "$REPOD/server_messaging.repo" || zypper addrepo "https://download.opensuse.org/repositories/server:messaging/openSUSE_Leap_$VERSION/server:messaging.repo" # package slack
 test -e "$REPOD/home_-miska-.repo" || zypper addrepo "https://download.opensuse.org/repositories/home:-miska-/openSUSE_Leap_$VERSION/home:-miska-.repo" # package bedup
 test -e "$REPOD/Java_packages.repo" || zypper addrepo "https://download.opensuse.org/repositories/Java:packages/openSUSE_Leap_$VERSION/Java:packages.repo" # package maven
+test -e "$REPOD/network.repo" || zypper addrepo "https://download.opensuse.org/repositories/network/openSUSE_Leap_$VERSION/network.repo" # package datovka
 rpm --import https://packages.microsoft.com/keys/microsoft.asc || true ; test -e "$REPOD/vscode.repo" || sh -c 'echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\ntype=rpm-md\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" > '"$REPOD/vscode.repo"
 
 zypper refresh
