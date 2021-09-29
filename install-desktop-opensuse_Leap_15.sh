@@ -20,7 +20,7 @@ test -e "$REPOD/network_im_signal.repo" || zypper addrepo "https://download.open
 
 zypper refresh
 
-zypper install vim mc screen kdiff3 docker docker-compose opera openvpn ncdu doublecmd-qt5 krusader krusader-doc krename unrar collectd mlocate net-tools-deprecated clamav gcc asbru-cm gimp inkscape dbeaver libQt5WebKit5 libQt5WebKitWidgets5 discord zip chromium apache2-utils npm10 MozillaThunderbird java-13-openjdk duperemove gradle slack lynx links elinks bedup tcpdump code datovka junit maven php php-composer php-gd php-mbstring php-mysql pinta rclone iotop electrum curlftpfs filezilla mosh signal-desktop telegram-desktop jq
+zypper install vim mc screen kdiff3 docker docker-compose opera openvpn ncdu doublecmd-qt5 krusader krusader-doc krename unrar collectd mlocate net-tools-deprecated clamav gcc asbru-cm gimp inkscape dbeaver libQt5WebKit5 libQt5WebKitWidgets5 discord zip chromium apache2-utils npm10 MozillaThunderbird java-13-openjdk duperemove gradle slack lynx links elinks bedup tcpdump code datovka junit maven php php-composer php-gd php-mbstring php-mysql pinta rclone iotop electrum curlftpfs filezilla mosh signal-desktop telegram-desktop jq go
 
 echo -n "Searching Angular ... " ; which ng || npm install -g @angular/cli
 
