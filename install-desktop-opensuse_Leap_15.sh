@@ -15,12 +15,13 @@ test -e "$REPOD/Java_packages.repo" || zypper addrepo "https://download.opensuse
 test -e "$REPOD/network.repo" || zypper addrepo "https://download.opensuse.org/repositories/network/openSUSE_Leap_$VERSION/network.repo" # package datovka
 test -e "$REPOD/home_ecsos_server.repo" || zypper addrepo "https://download.opensuse.org/repositories/home:ecsos:server/openSUSE_Leap_$VERSION/home:ecsos:server.repo" # up-to-date package php-composer
 test -e "$REPOD/network_cryptocurrencies.repo" || zypper addrepo "https://download.opensuse.org/repositories/network:cryptocurrencies/openSUSE_Leap_$VERSION/network:cryptocurrencies.repo" # electrum (Bitcoin wallet client)
+test -e "$REPOD/network_vpn.repo" || zypper addrepo "https://download.opensuse.org/repositories/network:vpn/openSUSE_Leap_$VERSION/network:vpn.repo" # OpenVPN newest version due to digests support
 # stopped to work: test -e "$REPOD/network_im_signal.repo" || zypper addrepo "https://download.opensuse.org/repositories/network:im:signal/openSUSE_Leap_$VERSION/network:im:signal.repo" # package signal-desktop
 #rpm --import https://packages.microsoft.com/keys/microsoft.asc || true ; test -e "$REPOD/vscode.repo" || sh -c 'echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\ntype=rpm-md\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" > '"$REPOD/vscode.repo"
 
-zypper refresh
+zypper refresh || echo "Warning: zypper refresh: there were error(s)" 1>&2
 
-zypper install vim mc screen kdiff3 docker docker-compose opera openvpn ncdu doublecmd-qt5 krusader krusader-doc krename unrar collectd mlocate net-tools-deprecated clamav gcc asbru-cm gimp inkscape dbeaver libQt5WebKit5 libQt5WebKitWidgets5 discord zip chromium apache2-utils npm12 MozillaThunderbird java-13-openjdk duperemove gradle slack lynx links elinks bedup tcpdump code datovka junit maven php php-composer php-gd php-mbstring php-mysql pinta rclone iotop electrum curlftpfs filezilla mosh telegram-desktop jq go
+zypper install vim mc screen kdiff3 docker docker-compose openvpn ncdu doublecmd-qt5 krusader krusader-doc krename unrar collectd mlocate net-tools-deprecated clamav gcc asbru-cm gimp inkscape dbeaver libQt5WebKit5 libQt5WebKitWidgets5 discord zip chromium apache2-utils npm12 MozillaThunderbird java-13-openjdk duperemove gradle slack lynx links elinks bedup tcpdump code datovka junit maven php php-composer php-gd php-mbstring php-mysql pinta rclone iotop electrum curlftpfs filezilla mosh telegram-desktop jq go transmission
 
 echo -n "Searching Angular ... " ; which ng || npm install -g @angular/cli
 
