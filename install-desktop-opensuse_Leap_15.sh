@@ -27,7 +27,7 @@ test -e "$REPOD/home_illuusio_nodejs-packages.repo" || zypper addrepo "https://d
 
 zypper refresh || echo "Warning: zypper refresh: there were error(s)" 1>&2
 
-zypper install vim mc screen kdiff3 docker docker-compose openvpn ncdu doublecmd-qt5 krusader krusader-doc krename unrar collectd mlocate net-tools-deprecated clamav gcc asbru-cm gimp inkscape dbeaver libQt5WebKit5 libQt5WebKitWidgets5 discord zip chromium apache2-utils npm12 MozillaThunderbird java-13-openjdk java-17-openjdk duperemove gradle slack lynx links elinks bedup tcpdump code datovka junit maven php php-composer php-gd php-mbstring php-mysql pinta rclone iotop electrum curlftpfs filezilla mosh telegram-desktop jq go transmission node-gyp nodejs16 nodejs16-devel gcc-c++ nethogs xdotool shutter xprintidle
+zypper install vim mc screen kdiff3 docker docker-compose openvpn ncdu doublecmd-qt5 krusader krusader-doc krename unrar collectd mlocate net-tools-deprecated clamav gcc asbru-cm gimp inkscape dbeaver libQt5WebKit5 libQt5WebKitWidgets5 discord zip chromium apache2-utils npm12 MozillaThunderbird java-13-openjdk java-17-openjdk duperemove gradle slack lynx links elinks bedup tcpdump code datovka junit maven php php-composer php-gd php-mbstring php-mysql pinta rclone iotop electrum curlftpfs filezilla mosh telegram-desktop jq go transmission node-gyp nodejs16 nodejs16-devel gcc-c++ nethogs xdotool shutter xprintidle libva-utils
 
 echo -n "Searching Angular ... " ; which ng || npm install -g @angular/cli
 
